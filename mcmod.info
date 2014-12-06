@@ -1,0 +1,15 @@
+[
+	{
+		"modid": "snowconeUtil",
+		"description": "Snowcone Util library",
+		"mcversion": "1.7.10",
+		"url": "",
+		"updateUrl": "",
+		"logoFile": "assets/snowconeUtil/textures/logo.png",
+		"authors": [
+			"hybolic",
+			"SporNightReloaded"
+		],
+		"credits": ""
+	}
+]
