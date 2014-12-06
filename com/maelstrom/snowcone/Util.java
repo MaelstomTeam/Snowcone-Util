@@ -18,7 +18,7 @@ public class Util {
     public void postInit(FMLPostInitializationEvent event){
 		
 	}
-	
+	//update over each version if obfuscation name changes
 	private void extendPotionAmountBy(int amount) {
 		net.minecraft.potion.Potion[] potionTypes = null;
 		for (java.lang.reflect.Field f : net.minecraft.potion.Potion.class.getDeclaredFields()) {
