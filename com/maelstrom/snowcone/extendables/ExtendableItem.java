@@ -17,14 +17,6 @@ public abstract class ExtendableItem extends Item {
 		super();
 		setUnlocalizedName(modid+"."+name);
 		mod_id = modid;
-//		this.setTextureName(Reference.MOD_ID + ":" + name);
+		this.setTextureName(Reference.MOD_ID + ":" + getUnlocalizedName().substring(5 + mod_id.length() + 1));
 	}
-	
-	@SideOnly(Side.CLIENT)
-    protected String getIconString(){
-        return this.getUnlocalizedName().substring(5 + mod_id.length() + 1);
-    }
-
-    public abstract void registerIcons(IIconRegister iicon);
-//    public abstract IIcon getIcon(ItemStack stack, int pass);
 }
