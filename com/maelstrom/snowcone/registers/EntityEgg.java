@@ -3,7 +3,7 @@ package com.maelstrom.snowcone.registers;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
-import cpw.mods.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class EntityEgg {
 	
@@ -16,7 +16,7 @@ public class EntityEgg {
 		int id = getUniqueEntityId();
 		EntityRegistry.registerModEntity(entity, entityName, id, mod,
 				trackingRange, updateFrequency, sendsVelocityUpdates);
-		EntityList.IDtoClassMapping.put(id, entity);
+		EntityList.idToClassMapping.put(id, entity);
 		EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor,
 				secondaryColor));
 	}

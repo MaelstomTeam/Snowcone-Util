@@ -29,7 +29,7 @@ public class OreGenBlock {
 			int xCoord = x + random.nextInt(16);
 			int yCoord = minY + random.nextInt(maxY - minY);
 			int zCoord = z + random.nextInt(16);
-			new WorldGenMinable(block, meta, vainSize, Blocks.stone).generate(world, random, xCoord, yCoord, zCoord);
+			//new WorldGenMinable(block, meta, vainSize, Blocks.stone).generate(world, random, xCoord, yCoord, zCoord);
 		}
 	}
 }

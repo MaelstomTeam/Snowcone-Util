@@ -2,12 +2,9 @@ package com.maelstrom.snowcone;
 
 import java.util.ArrayList;
 
-import com.google.common.base.Strings;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.client.GuiModList;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.ModContainer;
+import net.minecraftforge.fml.client.FMLClientHandler;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.ModContainer;
 
 public class PrivateWorkAround {
 	private static int myModLocation = -99;
