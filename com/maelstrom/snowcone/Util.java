@@ -9,15 +9,16 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.client.GuiModList;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
+
+import cpw.mods.fml.client.GuiModList;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid="snowconeUtil", name="Snowcone Util", version="1.2.1", useMetadata = true)
 public class Util {
@@ -50,17 +51,17 @@ public class Util {
 		        GL11.glTranslatef((float)(300), 50.0F, 0.0F);
 				GL11.glRotated(-10, 0, 0, 1);
 		        float f1 = 1.8F - MathHelper.abs(MathHelper.sin((float)(Minecraft.getSystemTime() % 1000L) / 1000.0F * (float)Math.PI * 2.0F) * 0.1F);
-		        f1 = f1 * 100.0F / (float)(Minecraft.getMinecraft().fontRendererObj.getStringWidth("HAPPY B-DAY HYBOLIC!!") + 32);
+		        f1 = f1 * 100.0F / (float)(Minecraft.getMinecraft().fontRenderer.getStringWidth("HAPPY B-DAY HYBOLIC!!") + 32);
 		        GL11.glScalef(f1, f1, f1);
 		        //EVENTS
 				if(calendar.get(2) + 1 == 2 && calendar.get(5) == 7)
-					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "HAPPY B-DAY Nadir!!", 0, 0, Color.yellow.hashCode());
+					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "HAPPY B-DAY Nadir!!", 0, 0, Color.yellow.hashCode());
 		        else if((calendar.get(2) + 1 == 12 && calendar.get(5) == 16))   
-					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "HAPPY B-DAY SporNight!!", 0, 0, Color.yellow.hashCode());
+					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "HAPPY B-DAY SporNight!!", 0, 0, Color.yellow.hashCode());
 		        else if((calendar.get(2) + 1 == 10 && calendar.get(5) == 31))
-					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "Spooky Scary Skeletons!", 0, 0, Color.yellow.hashCode());
+					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "Spooky Scary Skeletons!", 0, 0, Color.yellow.hashCode());
 		        else if((calendar.get(2) + 1 == 4 && calendar.get(5) == 4))
-					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "HAPPY B-DAY SnowconeUtil!", 0, 0, Color.yellow.hashCode());
+					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "HAPPY B-DAY SnowconeUtil!", 0, 0, Color.yellow.hashCode());
 		        /* add the first day out of alpha here
 		        else if((calendar.get(2) + 1 == 10 && calendar.get(5) == 31))
 					event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "HAPPY B-DAY Arcane Mechina!", 0, 0, Color.yellow.hashCode());
@@ -68,11 +69,11 @@ public class Util {
 				
 		        else{
 		        	if (rng == 0)
-		        		event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "Don't worry It's Lemon!", 0, 0, Color.yellow.hashCode());
+		        		event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "Don't worry It's Lemon!", 0, 0, Color.yellow.hashCode());
 		        	else if (rng == 1)
-		        		event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "It's not icecream!", 0, 0, Color.yellow.hashCode());
+		        		event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "It's not icecream!", 0, 0, Color.yellow.hashCode());
 		        	else if (rng == 2)
-		        		event.gui.drawCenteredString(Minecraft.getMinecraft().fontRendererObj, "1,403rd times the charm right?", 0, 0, Color.yellow.hashCode());
+		        		event.gui.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "1,403rd times the charm right?", 0, 0, Color.yellow.hashCode());
 		        }
 				GL11.glPopMatrix();
 				if(rngLast != rng)

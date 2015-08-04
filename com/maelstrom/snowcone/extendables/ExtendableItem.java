@@ -10,6 +10,6 @@ public abstract class ExtendableItem extends Item {
 		super();
 		setUnlocalizedName(modid+"."+name);
 		mod_id = modid;
-		//this.setTextureName(modid + ":" + getUnlocalizedName().substring(5 + mod_id.length() + 1));
+		this.setTextureName(modid + ":" + getUnlocalizedName().substring(5 + mod_id.length() + 1));
 	}
 }

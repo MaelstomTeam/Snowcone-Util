@@ -9,8 +9,8 @@ public class ExtendableBlock extends Block {
 
 	protected ExtendableBlock(Material material, String local, String modid) {
 		super(material);
-		this.setUnlocalizedName(modid + "." + local.replace('/', '.'));
-		//setBlockTextureName(modid + ":" + local);
+		this.setBlockName(modid + "." + local.replace('/', '.'));
+		setBlockTextureName(modid + ":" + local);
 		mod_id = modid;
 	}
 }
