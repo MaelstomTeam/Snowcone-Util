@@ -9,7 +9,7 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ItemRegistry {
 
-	protected static void registItem(FMLStateEvent event, Item item, String itemName, String modID, CreativeTabs tab){
+	protected static void registItem(Item item, String itemName, String modID, CreativeTabs tab){
 		GameRegistry.registerItem(item, itemName, modID);
 		if(tab != null)
 			item.setCreativeTab(tab);
