@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 
 public abstract class ExtendableItem extends Item {
 	
-	private String mod_id;
+	protected final String mod_id;
 	
 	public ExtendableItem(String name, String modid){
 		super();
